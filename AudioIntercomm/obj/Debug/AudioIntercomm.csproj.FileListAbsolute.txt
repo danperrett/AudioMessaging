@@ -1,0 +1,38 @@
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.exe.config
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.exe
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.pdb
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csprojResolveAssemblyReference.cache
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.Properties.Resources.resources
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csproj.GenerateResource.Cache
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.exe
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.pdb
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\NAudio.dll
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\NAudio.xml
+c:\users\daniel\documents\visual studio 2015\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.AudioForm.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\agsXMPP.dll
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.AudioForm.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.Properties.Resources.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csproj.GenerateResource.cache
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csproj.CoreCompileInputs.cache
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.exe
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.pdb
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.exe.config
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.exe
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.pdb
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\bin\Debug\agsXMPP.dll
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\bin\Debug\NAudio.dll
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\bin\Debug\NAudio.xml
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csproj.CopyComplete
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.exe.config
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.exe
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\AudioIntercomm.pdb
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\agsXMPP.dll
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\NAudio.dll
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\bin\Debug\NAudio.xml
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.AudioForm.resources
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.Properties.Resources.resources
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csproj.GenerateResource.Cache
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.exe
+C:\Users\Daniel Perrett\Documents\Visual Studio 2013\Projects\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.pdb
+C:\Users\dperrett\Documents\Visual Studio 2017\AudioIntercomm\AudioIntercomm\obj\Debug\AudioIntercomm.csprojAssemblyReference.cache

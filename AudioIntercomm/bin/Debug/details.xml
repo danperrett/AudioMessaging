@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<UserDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Password>images</Password>
+  <Username>dperrett</Username>
+  <ToList>
+    <string>audiotest2</string>
+  </ToList>
+</UserDetails>

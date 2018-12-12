@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://service.audio.org" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://service.audio.org" targetNamespace="http://service.audio.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://service.audio.org">
+      <xsd:element name="checkCredantials">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="random_access" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkCredantialsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="checkCredantialsReturn" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="messageAvailable">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="messageAvailableResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="messageAvailableReturn" type="impl:AudioInformation" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="AudioInformation">
+        <xsd:sequence>
+          <xsd:element name="Data" nillable="true" type="xsd:string" />
+          <xsd:element name="containsData" type="xsd:boolean" />
+          <xsd:element name="Username" nillable="true" type="xsd:string" />
+          <xsd:element name="To" nillable="true" type="xsd:string" />
+          <xsd:element name="id" type="xsd:int" />
+          <xsd:element name="count" type="xsd:int" />
+          <xsd:element name="length" type="xsd:int" />
+          <xsd:element name="bitmask" type="xsd:short" />
+          <xsd:element name="DTS" type="xsd:boolean" />
+          <xsd:element name="type" type="xsd:int" />
+          <xsd:element name="encryptKey" type="xsd:int" />
+          <xsd:element name="encryptOn" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getVersion">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getVersionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getVersionReturn" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="putAudio">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="length" type="xsd:int" />
+            <xsd:element name="id" type="xsd:int" />
+            <xsd:element name="data" type="xsd:string" />
+            <xsd:element name="bitmask" type="xsd:short" />
+            <xsd:element name="useDTS" type="xsd:boolean" />
+            <xsd:element name="type" type="xsd:int" />
+            <xsd:element name="encryption" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="putAudioResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="putAudioReturn" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="endAudio">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="id" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="endAudioResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="endAudioReturn" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPacketLength">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="id" type="xsd:int" />
+            <xsd:element name="count" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPacketLengthResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getPacketLengthReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hello">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="helloResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="helloReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changeOnlineStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="state" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changeOnlineStatusResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="createNewStream">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="tolist" type="xsd:string" />
+            <xsd:element name="type" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createNewStreamResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="createNewStreamReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAudio">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="username" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="id" type="xsd:int" />
+            <xsd:element name="count" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAudioResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getAudioReturn" type="impl:AudioInformation" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="putAudioResponse">
+    <wsdl:part name="parameters" element="impl:putAudioResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVersionResponse">
+    <wsdl:part name="parameters" element="impl:getVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAudioResponse">
+    <wsdl:part name="parameters" element="impl:getAudioResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkCredantialsResponse">
+    <wsdl:part name="parameters" element="impl:checkCredantialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="endAudioRequest">
+    <wsdl:part name="parameters" element="impl:endAudio" />
+  </wsdl:message>
+  <wsdl:message name="putAudioRequest">
+    <wsdl:part name="parameters" element="impl:putAudio" />
+  </wsdl:message>
+  <wsdl:message name="getPacketLengthRequest">
+    <wsdl:part name="parameters" element="impl:getPacketLength" />
+  </wsdl:message>
+  <wsdl:message name="endAudioResponse">
+    <wsdl:part name="parameters" element="impl:endAudioResponse" />
+  </wsdl:message>
+  <wsdl:message name="changeOnlineStatusRequest">
+    <wsdl:part name="parameters" element="impl:changeOnlineStatus" />
+  </wsdl:message>
+  <wsdl:message name="messageAvailableResponse">
+    <wsdl:part name="parameters" element="impl:messageAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="messageAvailableRequest">
+    <wsdl:part name="parameters" element="impl:messageAvailable" />
+  </wsdl:message>
+  <wsdl:message name="changeOnlineStatusResponse">
+    <wsdl:part name="parameters" element="impl:changeOnlineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAudioRequest">
+    <wsdl:part name="parameters" element="impl:getAudio" />
+  </wsdl:message>
+  <wsdl:message name="getVersionRequest">
+    <wsdl:part name="parameters" element="impl:getVersion" />
+  </wsdl:message>
+  <wsdl:message name="createNewStreamResponse">
+    <wsdl:part name="parameters" element="impl:createNewStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkCredantialsRequest">
+    <wsdl:part name="parameters" element="impl:checkCredantials" />
+  </wsdl:message>
+  <wsdl:message name="createNewStreamRequest">
+    <wsdl:part name="parameters" element="impl:createNewStream" />
+  </wsdl:message>
+  <wsdl:message name="getPacketLengthResponse">
+    <wsdl:part name="parameters" element="impl:getPacketLengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="helloResponse">
+    <wsdl:part name="parameters" element="impl:helloResponse" />
+  </wsdl:message>
+  <wsdl:message name="helloRequest">
+    <wsdl:part name="parameters" element="impl:hello" />
+  </wsdl:message>
+  <wsdl:portType name="AudioReflect">
+    <wsdl:operation name="checkCredantials">
+      <wsdl:input name="checkCredantialsRequest" message="impl:checkCredantialsRequest" />
+      <wsdl:output name="checkCredantialsResponse" message="impl:checkCredantialsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="messageAvailable">
+      <wsdl:input name="messageAvailableRequest" message="impl:messageAvailableRequest" />
+      <wsdl:output name="messageAvailableResponse" message="impl:messageAvailableResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdl:input name="getVersionRequest" message="impl:getVersionRequest" />
+      <wsdl:output name="getVersionResponse" message="impl:getVersionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="putAudio">
+      <wsdl:input name="putAudioRequest" message="impl:putAudioRequest" />
+      <wsdl:output name="putAudioResponse" message="impl:putAudioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="endAudio">
+      <wsdl:input name="endAudioRequest" message="impl:endAudioRequest" />
+      <wsdl:output name="endAudioResponse" message="impl:endAudioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPacketLength">
+      <wsdl:input name="getPacketLengthRequest" message="impl:getPacketLengthRequest" />
+      <wsdl:output name="getPacketLengthResponse" message="impl:getPacketLengthResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <wsdl:input name="helloRequest" message="impl:helloRequest" />
+      <wsdl:output name="helloResponse" message="impl:helloResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="changeOnlineStatus">
+      <wsdl:input name="changeOnlineStatusRequest" message="impl:changeOnlineStatusRequest" />
+      <wsdl:output name="changeOnlineStatusResponse" message="impl:changeOnlineStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createNewStream">
+      <wsdl:input name="createNewStreamRequest" message="impl:createNewStreamRequest" />
+      <wsdl:output name="createNewStreamResponse" message="impl:createNewStreamResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAudio">
+      <wsdl:input name="getAudioRequest" message="impl:getAudioRequest" />
+      <wsdl:output name="getAudioResponse" message="impl:getAudioResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AudioReflectSoapBinding" type="impl:AudioReflect">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkCredantials">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkCredantialsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkCredantialsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="messageAvailable">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="messageAvailableRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="messageAvailableResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getVersionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getVersionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="putAudio">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="putAudioRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="putAudioResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endAudio">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="endAudioRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="endAudioResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPacketLength">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPacketLengthRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPacketLengthResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="helloRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="helloResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeOnlineStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="changeOnlineStatusRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="changeOnlineStatusResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNewStream">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createNewStreamRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createNewStreamResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAudio">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAudioRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAudioResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AudioReflectService">
+    <wsdl:port name="AudioReflect" binding="impl:AudioReflectSoapBinding">
+      <wsdlsoap:address location="http://www.codinggain.com/AudioService/services/AudioReflect" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
